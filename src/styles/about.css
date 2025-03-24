@@ -1,0 +1,156 @@
+.about {
+  background-color: var(--bg-dark-secondary);
+  position: relative;
+}
+
+.section-title {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.section-divider {
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent-primary);
+  margin: 0 auto 3rem;
+  position: relative;
+}
+
+.section-divider::before,
+.section-divider::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-primary);
+  top: -1.5px;
+}
+
+.section-divider::before {
+  left: -10px;
+}
+
+.section-divider::after {
+  right: -10px;
+}
+
+.about__header {
+  margin-bottom: 4rem;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about__image-container {
+  position: relative;
+}
+
+.about__image {
+  position: relative;
+  height: 500px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-image: url('https://cdn11.bigcommerce.com/s-x49po/images/stencil/1500x1500/products/128596/295584/prints%2Fdownscaled%2Fp_9cvapiye8ue_2000x2000__27828.1716875244.jpg?c=2');
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.about__image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 15, 15, 0.2) 0%,
+    rgba(15, 15, 15, 0.5) 100%
+  );
+}
+
+.about__text {
+  padding: 1rem 0;
+}
+
+.about__text h3 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: var(--text-light);
+}
+
+.about__text p {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.about__features {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.about__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.about__feature-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(212, 129, 102, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about__feature-text h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+
+.about__feature-text p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* Медіа-запити */
+@media (max-width: 992px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about__image {
+    height: 400px;
+  }
+
+  .about__text {
+    padding: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about__image {
+    height: 350px;
+  }
+
+  .about__text h3 {
+    font-size: 1.8rem;
+  }
+
+  .about__features {
+    grid-template-columns: 1fr;
+  }
+}
